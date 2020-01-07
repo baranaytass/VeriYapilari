@@ -45,12 +45,11 @@ void peek(struct node* root){
     }
     printf("%d \n",temp->data);
 }
-void destroy(struct node* root){
-    while(root->next!=NULL){
-        pop(&root);
+void destroy(struct node** root){
+    while((*root)->next!=NULL){
+        pop(root);
     }
-    pop(&root);
-    
+    pop(root);
 }
 int main(){
     int secim,sayi;
